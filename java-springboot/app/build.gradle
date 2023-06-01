@@ -33,7 +33,7 @@ tasks.withType(JavaCompile) {
 // eclipse 설정
 eclipse {
     project {
-        name = "study-app"
+        name = "study-springboot-app"
     }
     jdt {  
       sourceCompatibility = 17
