@@ -113,14 +113,17 @@ dependencies {
   implementation 'javax.servlet:jstl:1.2'
 }
 ```
-> 페이지 호출 예시
+> 페이지  예시
+```
+<a href="/study/openjsp">JSP Page 오픈</a>
+```
 ```
 @RestController
 public class JSPController {
 
-  @GetMapping("/testjsp")
+  @GetMapping("/openjsp")
   public Object testjsp() {
-  // test.jsp파일을 열고 싶을 때
+  // test.jsp 파일을 열고 싶을 때
     return "test";
   }
 }
