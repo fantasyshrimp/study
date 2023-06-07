@@ -122,7 +122,7 @@ dependencies {
 public class JSPController {
 
   @GetMapping("/openjsp")
-  public Object testjsp() {
+  public Object openjsp() {
   // test.jsp 파일을 열고 싶을 때
     return "test";
   }
