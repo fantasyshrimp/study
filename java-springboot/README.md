@@ -96,3 +96,32 @@ eclipse {
 ```
 > $ gradle eclipse  <br/>
 > eclipse에서 import -> next -> 폴더 선택  <br/>
+
+<br/><br/><br/>
+
+# 페이지 구성
+### 메인 페이지
+> static 폴더에 index.html이 있다면 localhost:8080/study(설정된 루트)의 페이지로 사용된다.
+
+### .jsp
+> .jsp로 페이지를 사용하고 싶다면 src/main/resources/templates 디렉토리에 jsp파일을 추가하여 사용할 수 있다.
+> build.gradle -  <br/>
+> 아래 내용 추가
+```
+dependencies {
+  compileOnly 'org.apache.tomcat.embed:tomcat-embed-jasper'
+  implementation 'javax.servlet:jstl:1.2'
+}
+```
+> 페이지 호출 예시
+```
+@RestController
+public class JSPController {
+
+  @GetMapping("/testjsp")
+  public Object testjsp() {
+  // test.jsp파일을 열고 싶을 때
+    return "test";
+  }
+}
+```
