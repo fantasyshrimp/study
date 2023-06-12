@@ -61,7 +61,7 @@ targetCompatibility = '17'
 ```server.port=8080```
  - url 설정
 ```server.servlet.context-path=/study```
-
+--> 위 설정 시 메인 url : localhost:8080/study
 - Database 설정 ( mariadb )
 ```
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
