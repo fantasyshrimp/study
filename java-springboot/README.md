@@ -60,8 +60,8 @@ targetCompatibility = '17'
 - 포트번호 설정
 ```server.port=8080```
  - url 설정
-```server.servlet.context-path=/study```
-
+```server.servlet.context-path=/study``` <br/>
+--> 위 설정 시 메인 url : localhost:8080/study
 - Database 설정 ( mariadb )
 ```
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
@@ -104,7 +104,7 @@ eclipse {
 > static 폴더에 index.html이 있다면 localhost:8080/study(설정된 루트)의 페이지로 사용된다.
 
 ### .jsp
-> .jsp로 페이지를 사용하고 싶다면 src/main/resources/templates 디렉토리에 jsp파일을 추가하여 사용할 수 있다.
+> .jsp로 페이지를 사용하고 싶다면 src/main/resources/templates 디렉토리에 jsp파일을 추가하여 사용할 수 있다.<br/>
 > build.gradle -  <br/>
 > 아래 내용 추가
 ```
