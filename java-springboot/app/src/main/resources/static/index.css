@@ -18,3 +18,22 @@ main {
     margin: 0 auto;
 
 }
+
+
+div {
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+}
+
+
+#simple-chat {
+    height: 300px;
+}
+
+#chat-message {
+    width: 300px;
+}
+
+#chat-username {
+    width: 80px;
+}
