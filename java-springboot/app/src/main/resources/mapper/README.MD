@@ -27,7 +27,7 @@ public class SampleVo {
 ```
 <br/>
 > SampleVoDao 예시
-> 
+
 ```
 package study.app.dao;
 
@@ -41,6 +41,7 @@ public interface SampleVoDao {
 ```
 <br/>
 > SampleVoDao.xml mapper파일 예시
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
