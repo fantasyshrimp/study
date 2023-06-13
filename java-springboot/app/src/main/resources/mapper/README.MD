@@ -1,6 +1,6 @@
 # MAPPER FILE 설정
 ### mybatis
-> Dao클래스의 메소드 실행 시 Dao.xml파일과 연동하여 sql문을 실행할 수 있다.
+> Dao클래스의 메소드 실행 시 Dao.xml파일과 연동하여 sql문을 실행할 수 있다. <br/>
 > application.properties -  <br/>
 ```#mybatis
 mybatis.type-aliases-package=study.app.vo
@@ -8,7 +8,7 @@ mybatis.mapper-locations=/mapper/**/*.xml
 ```
 --- 위의 경우 mapper파일의 경로는 resources/mapper/하위의 모든 .xml
 
-
+<br/>
 > SampleVo 예시
 ```
 package study.app.vo;
@@ -24,7 +24,7 @@ public class SampleVo {
   Date date;
 }
 ```
-
+<br/>
 > SampleVoDao 예시
 ```
 package study.app.dao;
@@ -37,7 +37,7 @@ public interface SampleVoDao {
   void insert(SampleVo vo);
 }
 ```
-
+<br/>
 > SampleVoDao.xml mapper파일 예시
 ```
 <?xml version="1.0" encoding="UTF-8"?>
