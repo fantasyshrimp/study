@@ -6,10 +6,10 @@
 <mapper namespace="study.app.dao.SimpleChatDao">
 
 	<resultMap type="SimpleChat" id="SimpleChatMap">
-	  <id column="chat_no" property="no" />
-    <result column="name" property="name" />
-	  <result column="msg" property="message" />
-	  <result column="send_dt" property="sendDate" />
+	  <id column="chat_no" property="no"/>
+    <result column="name" property="name"/>
+	  <result column="msg" property="message"/>
+	  <result column="send_dt" property="sendDate"/>
 	</resultMap>
 
   <insert id="insert" parameterType="SimpleChat">
@@ -18,7 +18,27 @@
   </insert>
 
 
+  <select id="list" resultMap="SimpleChatMap" parameterType="int">
+    select 
+      * 
+    from 
+      study_simplechat
+    order by
+      chat_no desc
+    limit #{count}
+  </select>
 
+  <select id="get" resultMap="SimpleChatMap" parameterType="SimpleChat">
+    select
+      *
+    from
+      study_simplechat
+    where
+      name = #{name} and msg = #{message}
+    order by
+      chat_no desc
+    limit 1
+  </select>
 
 
 </mapper>
