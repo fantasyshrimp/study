@@ -3,7 +3,7 @@ const chatInput = document.getElementById('chat-message');
 const chatNameInput = document.getElementById('chat-username');
 const chatList = document.getElementById('recent-chat-list');
 
-document.getElementById('tmp-request-btn').onclick = (e) => {
+document.getElementById('chat-send-btn').onclick = (e) => {
 	console.log('btn click');
 	sendMessage(chatInput.value, chatNameInput.value);
 };

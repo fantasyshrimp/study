@@ -1,4 +1,5 @@
 body {
+    position: relative;
     margin: 0;
 }
 
@@ -21,13 +22,13 @@ main {
 
 
 div {
-    box-sizing: border-box;
-    border-bottom: 1px solid gray;
+    box-sizing: border-box;    
 }
 
 
 #simple-chat {
     height: 300px;
+    border-bottom: 1px solid gray;
 }
 
 #chat-message {
@@ -36,4 +37,17 @@ div {
 
 #chat-username {
     width: 80px;
+}
+
+#modal {
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: gray;
+
+    visibility: hidden;
 }

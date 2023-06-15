@@ -9,6 +9,7 @@
   <body>
     <header>
       header
+      <button id="pop-up-modal">modal open</button>
     </header>
     <main>
       <h1>main</h1>
@@ -21,7 +22,7 @@
         <h3>simple chat</h3>
         <input id="chat-message" type="text">
         <input id="chat-username" type="text">
-        <button id="tmp-request-btn">send</button>
+        <button id="chat-send-btn">send</button>
         
         <ul id="recent-chat-list"></ul>
 
@@ -30,6 +31,11 @@
     <footer>
       footer
     </footer>
+
+    <div id="modal">
+      this is modal <br/>
+      close by click
+    </div>
 
     <script src="index.js"></script>
     <script src="./js/simplechat.js"></script>
