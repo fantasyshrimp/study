@@ -1,0 +1,1 @@
+insert into study_account(email,pwd) value('admin@study.com', sha2('1111', 256))

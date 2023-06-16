@@ -1,5 +1,6 @@
 const modalBtn = document.getElementById('pop-up-modal');
 const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modal-content');
 
 modalBtn.onclick = () => {
   modal.style.visibility = 'visible'
@@ -7,4 +8,8 @@ modalBtn.onclick = () => {
 
 modal.onclick = () => {
   modal.style.visibility = 'hidden'
+}
+
+modalContent.onclick = (event) => {
+  event.stopPropagation();
 }

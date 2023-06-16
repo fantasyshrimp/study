@@ -14,3 +14,19 @@ alter table study_simplechat
 
 alter table study_simplechat
   modify column chat_no integer not null auto_increment;
+  
+  
+  
+create table study_account (
+  act_no   integer     not null,
+  email    varchar(50) not null,
+  pwd      varchar(100)not null,
+  created_dt datetime not null default now()  
+);
+
+alter table study_account
+  add constraint PK_study_account primary key (act_no),
+  modify column act_no integer not null auto_increment;
+
+alter table study_account
+  add constraint UK_study_account unique (email);

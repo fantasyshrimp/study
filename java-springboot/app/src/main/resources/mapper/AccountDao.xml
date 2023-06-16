@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="study.app.dao.AccountDao">
+
+	<resultMap type="Account" id="AccountMap">
+	  <id column="act_no" property="no"/>
+    <result column="email" property="email"/>
+	  <result column="pwd" property="password"/>
+	  <result column="created_dt" property="createdDate"/>
+	</resultMap>
+
+  <select id="checkPassword" resultType="int" parameterType="Account">
+    select
+      count(email)
+    from
+      study_account
+    where email=#{email} and pwd=sha2(#{password},256)  
+  </select>
+
+
+</mapper>
