@@ -10,32 +10,41 @@
   <body>
 
     <header>
-      <div id="pop-up-modal" class="tmpMenu">
+      <h6 class="semantic-tag-title">header</h6>
+      <div class="tmpMenu">
+        <input id="header-holder" type="checkbox">
         <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M489-120v-60h291v-600H489v-60h291q24 0 42 18t18 42v600q0 24-18 42t-42 18H489Zm-78-185-43-43 102-102H120v-60h348L366-612l43-43 176 176-174 174Z"/></svg>
+        <svg id="pop-up-modal" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M489-120v-60h291v-600H489v-60h291q24 0 42 18t18 42v600q0 24-18 42t-42 18H489Zm-78-185-43-43 102-102H120v-60h348L366-612l43-43 176 176-174 174Z"/></svg>
       </div>
     </header>
 
     <main>
-      <h1>main</h1>
-      <div>
-        안녕!
-        <a href="/study/testjsp">Go to JSP Page</a>
-      </div>
+      <h1 class="semantic-tag-title">main</h1>
 
-      <div id="simple-chat">
-        <h3>simple chat</h3>
-        <input id="chat-message" type="text">
-        <input id="chat-username" type="text">
-        <button id="chat-send-btn">send</button>
-        
-        <ul id="recent-chat-list"></ul>
+      <section id="main-content">
+        <div>
+          안녕!
+          <a href="/study/testjsp">Go to JSP Page</a>
+        </div>
+  
+        <div id="simple-chat">
+          <h3>simple chat</h3>
+          <input id="chat-message" type="text">
+          <input id="chat-username" type="text">
+          <button id="chat-send-btn">send</button>
+          
+          <ul id="recent-chat-list"></ul>
+  
+        </div>
 
-      </div>
+        <div id="tmp-area"></div>
+
+      </section>
+      
     </main>
 
     <footer>
-      footer
+      <h6 class="semantic-tag-title">footer</h6>
     </footer>
 
     <div id="modal">
