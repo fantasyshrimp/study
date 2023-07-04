@@ -1,0 +1,23 @@
+
+#modal {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(100,100,100,0.3);
+  
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  width: 200px;
+  height: 200px;
+
+  background-color: gray;
+}
