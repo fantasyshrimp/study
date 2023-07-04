@@ -2,7 +2,7 @@
 #modal {
   visibility: hidden;
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 

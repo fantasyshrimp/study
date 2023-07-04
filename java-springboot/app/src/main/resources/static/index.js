@@ -4,12 +4,12 @@ const modalContent = document.getElementById('modal-content');
 
 modalBtn.onclick = () => {
   modal.style.visibility = 'visible';
-  document.body.style.overflow = 'hidden';
+  //document.body.style.overflow = 'hidden';
 }
 
 modal.onclick = () => {
   modal.style.visibility = 'hidden';
-  document.body.style.overflow = 'auto';
+  //document.body.style.overflow = 'auto';
 }
 
 modalContent.onclick = (event) => {

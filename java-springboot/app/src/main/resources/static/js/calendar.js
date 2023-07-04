@@ -93,18 +93,18 @@
 
 
   function dayClickEvent(target) {
-    document.body.style.overflow = 'hidden';
-    createModal(target.target ,target.target.innerHTML);
+    //document.body.style.overflow = 'hidden';
+    createModal(target.target.innerHTML);
   }
 
 
-  function createModal(parentElement, content) {
+  function createModal(content) {
     //
     const modalBackground = document.createElement('div')
   
     // 모달 배경 스타일 적용
     modalBackground.style.display = 'flex';
-    modalBackground.style.position = 'absolute';
+    modalBackground.style.position = 'fixed';
     modalBackground.style.top = 0;
     modalBackground.style.left = 0;
   
@@ -118,8 +118,8 @@
   
     // 모달 배경 클릭이벤트
     modalBackground.onclick = () => {
-    parentElement.removeChild(modalBackground);
-    document.body.style.overflow = 'auto';
+      //document.body.style.overflow = 'auto'
+      document.body.removeChild(modalBackground);
     }
   
     //
@@ -140,5 +140,5 @@
   
   
     modalBackground.appendChild(modalContent);
-    parentElement.appendChild(modalBackground);
+    document.body.appendChild(modalBackground);
   }
