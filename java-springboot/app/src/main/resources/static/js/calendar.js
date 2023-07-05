@@ -92,29 +92,35 @@
   }
 
 
-  function dayClickEvent(target) {
+  function dayClickEvent(event) {
     //document.body.style.overflow = 'hidden';
-    createModal(target.target.innerHTML);
+    const target = event.target;
+    const targetRect = target.getBoundingClientRect();
+
+    let x = targetRect.right;
+    let y = targetRect.top;
+    createModal(event.target.innerHTML, x, y);
   }
 
 
-  function createModal(content) {
+  function createModal(content, posx, posy) {
+
     //
     const modalBackground = document.createElement('div')
   
     // 모달 배경 스타일 적용
     modalBackground.style.display = 'flex';
     modalBackground.style.position = 'fixed';
-    modalBackground.style.top = 0;
     modalBackground.style.left = 0;
+    modalBackground.style.top = 0;
   
     modalBackground.style.width = '100vw';
     modalBackground.style.height = '100vh';
   
-    modalBackground.style.backgroundColor = 'rgba(100,100,100,0.3)';
+    modalBackground.style.backgroundColor = '#fff0';
   
-    modalBackground.style.justifyContent = 'center';
-    modalBackground.style.alignItems = 'center';
+    // modalBackground.style.justifyContent = 'center';
+    // modalBackground.style.alignItems = 'center';
   
     // 모달 배경 클릭이벤트
     modalBackground.onclick = () => {
@@ -126,9 +132,11 @@
     const modalContent = document.createElement('div')
     
     // 모달 내용 스타일 적용
-    modalContent.style.width = '500px';
-    modalContent.style.height = '500px';
-  
+    modalContent.style.position = 'relative';
+    modalContent.style.width = '200px';
+    modalContent.style.height = '100px';
+    modalContent.style.left = posx + 'px';
+    modalContent.style.top = (posy-100) + 'px'; // 크기에 따른 보간값 필요
     modalContent.style.backgroundColor = '#aaa'
   
     // 모달 내용 클릭이벤트 제어
