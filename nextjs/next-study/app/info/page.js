@@ -10,14 +10,13 @@ export default function Info() {
   return (
     <div>
       <h4 className="title">info page {STUDY_DATE}</h4>
-
-      <ul className="info-list">
+      <div className="info-list">
         {infoList.map((e, i) => {
           return (
             <InfoItem key={i} title={e}/>
           );
         })}
-      </ul>
+      </div>
 
     </div>
   )
@@ -26,7 +25,7 @@ export default function Info() {
 
 function InfoItem(props) {
   return (
-    <li>
+    <div>
       <img src="/fshrimp.png"/>
       {/* <Image src={profile} alt="이미지를 최적화 하려면
         Image태그 사용, 이미지 import후 사용"/> */}
@@ -34,7 +33,7 @@ function InfoItem(props) {
         alt="외부 url일 경우 width, height설정 필요, next.config.js파일에 셋팅 필요"/> */}
       <span>{props.title}</span>
       <LogButton />
-    </li>
+    </div>
   );
 }
 
