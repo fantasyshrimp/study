@@ -104,13 +104,24 @@ eclipse {
 > static 폴더에 index.html이 있다면 localhost:8080/study(설정된 루트)의 페이지로 사용된다.
 
 ### .jsp
-> .jsp로 페이지를 사용하고 싶다면 src/main/resources/templates 디렉토리에 jsp파일을 추가하여 사용할 수 있다.<br/>
+> .jsp로 페이지를 사용하고 싶다면 src/main/webapp/WEB-INF/ 디렉토리에 jsp파일을 추가하여 사용할 수 있다.<br/>
+> application.properties
+```
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+```
+> <br/>
 > build.gradle -  <br/>
 > 아래 내용 추가
 ```
 dependencies {
+  //spring boot 3.x 이상
+  implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+  implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+  implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+  //implementation 'javax.servlet:jstl:1.2' spring boot 2.x 이하
+
   compileOnly 'org.apache.tomcat.embed:tomcat-embed-jasper'
-  implementation 'javax.servlet:jstl:1.2'
 }
 ```
 > 페이지  예시
@@ -124,7 +135,8 @@ public class JSPController {
   @GetMapping("/openjsp")
   public Object openjsp() {
   // test.jsp 파일을 열고 싶을 때
-    return "test";
+    ModelAndView model = new ModelAndView("test");    
+    return model;
   }
 }
 ```
